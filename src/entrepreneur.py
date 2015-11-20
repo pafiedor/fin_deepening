@@ -56,8 +56,8 @@ class Entrepreneur(BaseAgent):
     def set_state_variables(self, _value):
         super(Entrepreneur, self).set_state_variables(_value)
 
-    def str(self):
-        super(Entrepreneur, self).str()
+    def __str__(self):
+        super(Entrepreneur, self).__str__()
 
     def __init__(self, _identifier, _params, _variables):
         super(Entrepreneur, self).__init__(_identifier, _params, _variables)

@@ -56,8 +56,8 @@ class Environment(BaseConfig):
     def set_variable_parameters(self, _value):
         super(Environment, self).set_variable_parameters(_value)
 
-    def str(self):
-        super(Environment, self).str()
+    def __str__(self):
+        super(Environment, self).__str__()
 
     def __init__(self):
         super(Environment, self).__init__()

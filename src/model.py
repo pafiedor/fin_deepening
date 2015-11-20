@@ -62,8 +62,8 @@ class Entrepreneur(BaseModel):
     def set_interactions(self, _value):
         super(Model, self).set_interactions(_value)
 
-    def str(self):
-        super(Model, self).str()
+    def __str__(self):
+        super(Model, self).__str__()
 
     def __init__(self, model_config):
         super(Model, self).__init__(model_config)

@@ -56,8 +56,8 @@ class Worker(BaseAgent):
     def set_state_variables(self, _value):
         super(Worker, self).set_state_variables(_value)
 
-    def str(self):
-        super(Worker, self).str()
+    def __str__(self):
+        super(Worker, self).__str__()
 
     def __init__(self, _identifier, _params, _variables):
         super(Worker, self).__init__(_identifier, _params, _variables)
