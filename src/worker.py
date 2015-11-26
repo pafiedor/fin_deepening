@@ -38,6 +38,8 @@ class Worker(BaseAgent):
     state_variables = {}
     accounts = []
 
+    state_variables['wage_belief'] = 0  # belief about price of labour
+
     def get_identifier(self):
         return self.identifier
 
@@ -61,3 +63,16 @@ class Worker(BaseAgent):
 
     def __init__(self, _identifier, _params, _variables):
         super(Worker, self).__init__(_identifier, _params, _variables)
+
+    def post_labour_offers(self, enviromnent):  # tries to sell optimally given wage beliefs
+        optimal_labour_amount = self.find_optimal_labour_amount()
+        enviromnent.postings.append([self.state_variables['wage_belief'], optimal_labour_amount, self])
+
+    def update_wage_belief(self):  # Update belief about labour price
+        pass
+
+    def find_optimal_labour_amount(self):  # Find optimal amount of labour to sell given wage beliefs
+        pass
+
+    def consume(self):  # Workers consume everything they earn
+        pass

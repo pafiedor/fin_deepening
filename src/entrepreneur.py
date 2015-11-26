@@ -38,6 +38,12 @@ class Entrepreneur(BaseAgent):
     state_variables = {}
     accounts = []
 
+    state_variables['wage_belief'] = 0  # belief about price of labour
+    state_variables['equity'] = 0
+    state_variables['capital'] = 0
+    state_variables['money'] = 0
+    state_variables['invetsment_opportunity'] = False  # Whether we can invest in this period
+
     def get_identifier(self):
         return self.identifier
 
@@ -61,3 +67,22 @@ class Entrepreneur(BaseAgent):
 
     def __init__(self, _identifier, _params, _variables):
         super(Entrepreneur, self).__init__(_identifier, _params, _variables)
+
+    def obtain_optimal_labour(self, environment):  # get labour from posts that will maximise profit given capital equity (wage beliefs on the side of workers)
+        pass
+        # shuffle the postings and find the ones below wage belief until end of postings or filled the requirements
+
+    def update_wage_belief(self):  # Update belief about labour price
+        pass
+
+    def choose_optimal_investment(self):  # Here we chose optimal investment, maybe how much to consume also and call self.consume()
+        pass
+
+    def consume(self):  # Smooth consumption (now|future???)
+        pass
+
+    def amortisation(self, environment):
+        self.state_variables['capital'] = self.state_variables['capital'] * environment.parameters['lambda']
+
+    def invest(self):
+        pass

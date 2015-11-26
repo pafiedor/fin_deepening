@@ -36,7 +36,12 @@ class Environment(BaseConfig):
     identifier = ""
     static_parameters = {}
     variable_parameters = {}
-    accounts = []
+    postings = []  # Postings for selling labour (rethink data structure)
+
+    static_parameters['theta'] = 0  # How much investment can you finance by equity [0,1]
+    static_parameters['phi'] = 0  # Resaleability, how much equity can you sell each time [0,1] #TURN INTO VARIABLE PARAMETERS?
+    static_parameters['beta'] = 0.9  # Time preference
+    static_parameters['lambda'] = 0.9  # Amortisation parameter
 
     def get_identifier(self):
         return self.identifier
