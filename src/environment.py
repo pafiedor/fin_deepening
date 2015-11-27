@@ -42,6 +42,8 @@ class Environment(BaseConfig):
     static_parameters['phi'] = 0  # Resaleability, how much equity can you sell each time [0,1] #TURN INTO VARIABLE PARAMETERS?
     static_parameters['beta'] = 0.9  # Time preference
     static_parameters['lambda'] = 0.9  # Amortisation parameter
+    static_parameters['productivity'] = 0.9  # Productivity parameter in C-D production
+    static_parameters['gamma'] = 0.9  # Capital intensity in Cobb-Douglas production
 
     def get_identifier(self):
         return self.identifier

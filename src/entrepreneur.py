@@ -76,6 +76,7 @@ class Entrepreneur(BaseAgent):
         pass
 
     def choose_optimal_investment(self):  # Here we chose optimal investment, maybe how much to consume also and call self.consume()
+        # maximise productivity*capital^gamma*labour^(1-gamma)-wage_belief*labour | prod/gamma/wage_belief given, max capital, max labour iteration over two dim
         pass
 
     def consume(self, environment):  # Smooth consumption (now|future) - from infinite sum of logs
