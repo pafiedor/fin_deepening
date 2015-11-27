@@ -75,4 +75,4 @@ class Worker(BaseAgent):
         pass
 
     def consume(self):  # Workers consume everything they earn
-        pass
+        comsumption_amount = (state_variables['equity'] + state_variables['money'])

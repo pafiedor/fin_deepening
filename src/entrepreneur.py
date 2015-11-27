@@ -78,8 +78,8 @@ class Entrepreneur(BaseAgent):
     def choose_optimal_investment(self):  # Here we chose optimal investment, maybe how much to consume also and call self.consume()
         pass
 
-    def consume(self):  # Smooth consumption (now|future???)
-        pass
+    def consume(self, environment):  # Smooth consumption (now|future) - from infinite sum of logs
+        comsumption_amount = (1 - environment.static_parameters['beta']) * (state_variables['equity'] + state_variables['money'])  # money+equity, what about production?
 
     def amortisation(self, environment):
         self.state_variables['capital'] = self.state_variables['capital'] * environment.parameters['lambda']
