@@ -69,7 +69,7 @@ class Worker(BaseAgent):
         enviromnent.postings.append([self.state_variables['wage_belief'], optimal_labour_amount, self])
 
     def update_wage_belief(self):  # Update belief about labour price
-        pass
+        pass  # Up if all sold, down if not all sold (control variable, third time increase size of jump by 10%)
 
     def find_optimal_labour_amount(self):  # Find optimal amount of labour to sell given wage beliefs
         pass
