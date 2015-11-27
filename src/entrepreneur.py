@@ -90,3 +90,6 @@ class Entrepreneur(BaseAgent):
 
     def invest(self):
         pass
+
+#MAX PROFITS >> SMOOTH CONSUMPTION
+#
